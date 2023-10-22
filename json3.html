@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Catalog</title>
+</head>
+
+<body>
+    <form action="#">
+        <label for="products">Choose a product:</label>
+        <select id="products"></select>
+
+        <input id="submit" type="submit" value="filter" />
+    </form>
+
+    <div id="products_name"></div>
+
+    <script>
+        $(document).ready(function () {
+            const productList = $("#products");
+            const submitElement = $("#submit");
+            const productsNameContainer = $("#products_name");
+
+            function displayProducts(data) {
+                const selectedCategory = productList.val();
+                productsNameContainer.empty();
+
+                data.forEach(function (product) {
+                    if (product.categories.includes(selectedCategory)) {
+                        const productName = $("<p>").text(product.name);
+                        productsNameContainer.append(productName);
+                    }
+                });
+            }
+
+            $.get("products.json", function (data) {
+                const categories = new Set();
+
+                data.forEach(function (product) {
+                    product.categories.forEach(function (cat) {
+                        categories.add(cat);
+                    });
+                });
+
+                categories.forEach(function (category) {
+                    const option = $("<option>").text(category);
+                    productList.append(option);
+                });
+
+                submitElement.on("click", function () {
+                    displayProducts(data); // Call the displayProducts function with the data
+                });
+            }).fail(function () {
+                productList.html("Failed to load data.");
+            });
+        });
+    </script>
+</body>
+
+</html>

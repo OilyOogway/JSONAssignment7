@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Catalog</title>
+</head>
+
+<body>
+    <div id="products_catalog"></div>
+
+    <script>
+        $(document).ready(function () {
+            const productCatalog = $("#products_catalog");
+
+            $.get("products.json", function (data) {
+                var JSONdata = data;
+                var productInfoHTML = '';
+
+                JSONdata.forEach(function (data) {
+                    productInfoHTML += `
+                <div class="product-info">
+                  <h2>${data.name}</h2>
+                  <p>${data.description}</p>
+                  <p>Price: ${data.price}</p>
+                  <p>Categories: ${data.categories.join(", ")}</p>
+                  <p>Sizes: ${data.sizes.join(", ")}</p>
+                </div>
+              `;
+                });
+
+                productCatalog.html(productInfoHTML);
+            }).fail(function () {
+                productCatalog.html("Failed to load data.");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

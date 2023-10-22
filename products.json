@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Bose Soundlink",
+        "description": "Portable bluetooth speaker",
+        "price": "$200",
+        "categories": ["Speaker", "Electronics", "Audio"],
+        "sizes": ["Small", "Medium"]
+    },
+    {
+        "name": "Angel Soft Tissues",
+        "description": "Light and airy paper to ease your runny noses",
+        "price": "$5.99",
+        "categories": ["Toiletries", "Paper Products", "Healthcare"],
+        "sizes": ["Regular", "Jumbo"]
+    },
+    {
+        "name": "Lay's BBQ Chips",
+        "description": "Thinly sliced fried potatoes with BBQ flavoring",
+        "price": "$1.99",
+        "categories": ["Snack", "Food", "Chips"],
+        "sizes": ["Small", "Large"]
+    },
+    {
+        "name": "MicroChill Mini Fridge",
+        "description": "Small dorm fridge that keeps college student essentials cold",
+        "price": "$300",
+        "categories": ["Appliances", "Electronics", "Kitchen"],
+        "sizes": ["Compact", "Mini"]
+    },
+    {
+        "name": "Threshold Toss Pillow",
+        "description": "Soft pillow for use on the couch or bed",
+        "price": "$20",
+        "categories": ["Furniture", "Home Decor", "Bedding"],
+        "sizes": ["Standard", "Large"]
+    },
+    {
+        "name": "Ello Portable Bottle",
+        "description": "Portable bottle that has built-in insulation to keep your drinks hot or cold for longer",
+        "price": "$18",
+        "categories": ["Bottles", "Drinkware", "Outdoor"],
+        "sizes": ["Regular", "Large"]
+    },
+    {
+        "name": "Bright Green Chopsticks",
+        "description": "Nice easy-to-clean chopsticks that will capture anyone's attention",
+        "price": "$2",
+        "categories": ["Utensils", "Kitchen", "Asian Cuisine"],
+        "sizes": ["Single Pair", "Set of 4"]
+    },
+    {
+        "name": "Woozoo Fan",
+        "description": "360 fan that boasts multiple modes",
+        "price": "$70",
+        "categories": ["Appliances", "Electronics"],
+        "sizes": ["Medium"]
+    },
+    {
+        "name": "Hand Sanitizing Wipes",
+        "description": "Wet wipes that kill 99.99% of germs",
+        "price": "$4.57",
+        "categories": ["Healthcare", "Cleaning", "Baby"],
+        "sizes": ["Medium"]
+    },
+    {
+        "name": "Neutrogena Daily Cleanser",
+        "description": "Dermatologist developed foaming facial cleanser",
+        "price": "$12",
+        "categories": ["Healthcare", "Skin"],
+        "sizes": ["Small", "Medium"]
+    },
+    {
+        "name": "Anker Wireless Charger",
+        "description": "Charge your phone wire-free using Qi technology",
+        "price": "$20",
+        "categories": ["Electronics", "Accessory"],
+        "sizes": ["Small", "Medium"]
+    },
+    {
+        "name": "Rk61 Mechanical Keyboard",
+        "description": "Tactile Mechanical keyboard with brown switches",
+        "price": "$60",
+        "categories": ["Computer", "Electronics"],
+        "sizes": ["Small", "Medium"]
+    }
+]
